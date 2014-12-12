@@ -49,6 +49,9 @@ body {
   #header #main-menu {
     padding-top: 30px;
     padding-bottom: 50px; }
+    @media only screen and (max-width: 640px) {
+      #header #main-menu {
+        text-align: center; } }
     #header #main-menu li {
       display: inline; }
       #header #main-menu li:last-child a:after {
@@ -60,6 +63,9 @@ body {
         color: #131313;
         position: relative;
         margin-left: -10px; }
+        @media only screen and (max-width: 640px) {
+          #header #main-menu li a {
+            padding: 8px 15px; } }
         #header #main-menu li a:hover, #header #main-menu li a.active {
           background: #f3f3f3; }
         #header #main-menu li a:after {
@@ -80,9 +86,15 @@ body {
     width: 100%;
     box-shadow: 5px 5px 5px #ccc; }
     #header.fixed-header .divisor {
-      background-image: url(../img/divisor-black.png); }
+      background-image: url(../img/divisor-black.png);
+      height: 50px;
+      bottom: -25px; }
     #header.fixed-header #main-menu {
       padding-bottom: 30px; }
+  @media only screen and (max-width: 640px) {
+    #header #logo img {
+      display: block;
+      margin: 0 auto; } }
 
 #footer {
   background: #d2d2d2;
@@ -98,10 +110,18 @@ body {
     font-weight: 400; }
   #footer li {
     margin-bottom: 8px; }
+  @media only screen and (max-width: 640px) {
+    #footer {
+      position: relative;
+      height: auto;
+      margin-top: 30px; } }
 
 #content {
   padding-top: 50px;
   padding-bottom: 240px; }
+  @media only screen and (max-width: 640px) {
+    #content {
+      padding-bottom: 0; } }
   #content h1 {
     color: #ff3300;
     font-weight: 700;
@@ -140,6 +160,9 @@ body {
     background: #f3f3f3;
     -webkit-box-shadow: 8px 8px 0 0 #cecece;
     box-shadow: 8px 8px 0 0 #cecece; }
+    @media only screen and (max-width: 640px) {
+      #content .scroll-nav__wrapper {
+        display: none !important; } }
     #content .scroll-nav__wrapper .scroll-nav__heading {
       display: none; }
     #content .scroll-nav__wrapper .scroll-nav__item {
@@ -164,5 +187,18 @@ body {
   background-image: url(../img/divisor-white.png);
   background-repeat: repeat-x;
   background-position: 50% 50%; }
+
+@media only screen and (max-width: 640px) {
+  body {
+    min-width: 100% !important;
+    max-width: 100% !important; }
+
+  .container_12 {
+    width: auto;
+    max-width: 100%;
+    padding: 10px; }
+    .container_12 div[class*='grid_'] {
+      width: 100% !important;
+      margin: 0 !important; } }
 
 /*# sourceMappingURL=style.css.map */

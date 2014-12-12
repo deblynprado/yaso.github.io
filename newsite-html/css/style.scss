@@ -15,6 +15,24 @@ $h1-size: 1.8em;
 $h2-size: 15px;
 $text-size: 12px;
 
+
+// responsive 
+
+$break-large: 1024px;
+$break-small: 640px;
+
+@mixin respond-to($media) {
+	@if $media == medium-screens {
+		@media only screen and (max-width: $break-large) { @content; }
+	}
+
+	@else if $media == small-screens {
+		@media only screen and (max-width: $break-small) { @content; }
+	}
+}
+
+
+
 html, body {
 	margin:0;
 	padding:0;
@@ -67,10 +85,18 @@ body {
 	#main-menu {
 		padding-top:30px;
 		padding-bottom:50px;
+
+		@include respond-to(small-screens) {
+			text-align: center;
+		}
+
 		li {
 			display: inline;
 			&:last-child a:after { display:none; }
 			a {
+				@include respond-to(small-screens) {
+					padding: 8px 15px;
+				}
 				line-height: 20px;
 				padding:8px 20px;
 				text-decoration: none;
@@ -105,10 +131,18 @@ body {
 
 		.divisor {
 			background-image: url(../img/divisor-black.png);
-
+			height: 50px;
+			bottom:-25px;
 		}
 		#main-menu {
 			padding-bottom:30px;
+		}
+	}
+
+	#logo img {
+		@include respond-to(small-screens) {
+			display: block;
+			margin:0 auto;
 		}
 	}
 }
@@ -132,12 +166,20 @@ body {
 		margin-bottom:8px; 
 	}
 
+	@include respond-to(small-screens) {
+		position:relative;
+		height: auto;
+		margin-top: 30px;
+	}
+
 }
 
 #content {
 	padding-top:50px;
 	padding-bottom: 240px;
-
+	@include respond-to(small-screens) {
+		padding-bottom: 0;
+	}
 	h1 {
 		color: $highlight-color;
 		font-weight: 700;
@@ -185,6 +227,9 @@ body {
 		-webkit-box-shadow: 8px 8px 0 0 $shadow-color;
 		box-shadow: 8px 8px 0 0 $shadow-color;
 
+		@include respond-to(small-screens) {
+			display: none!important;
+		}
 		.scroll-nav__heading {
 			display: none;
 		}
@@ -216,4 +261,24 @@ body {
 	background-repeat:repeat-x;
 	background-position:50% 50%;
 
+}
+
+
+@include respond-to(small-screens) {
+
+	body {
+		min-width:100%!important;
+		max-width: 100%!important;
+	}
+	.container_12 {
+		width: auto;
+		max-width: 100%;
+		padding:10px;
+		div[class*='grid_']  {
+			width: 100%!important;
+			margin: 0!important;
+		}
+	}
+
+	#main-menu li a { }
 }
