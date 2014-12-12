@@ -1,0 +1,139 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans+Mono|Inconsolata:400,700);
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; }
+
+#wrapper {
+  min-height: 100%;
+  position: relative; }
+
+.fleft {
+  float: left; }
+
+.fright {
+  float: right; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+.clearfix {
+  display: inline-block; }
+
+/* start commented backslash hack \*/
+* html .clearfix {
+  height: 1%; }
+
+.clearfix {
+  display: block; }
+
+/* close commented backslash hack */
+a {
+  color: #333; }
+  a:hover {
+    color: #000; }
+
+body {
+  background: url(../img/bg-pattern.png); }
+  body * {
+    font-family: "Inconsolata"; }
+
+#header {
+  position: relative;
+  padding-top: 30px; }
+  #header #main-menu {
+    padding-top: 30px;
+    padding-bottom: 50px; }
+    #header #main-menu li {
+      display: inline; }
+      #header #main-menu li:last-child a:after {
+        display: none; }
+      #header #main-menu li a {
+        line-height: 20px;
+        padding: 8px 20px;
+        text-decoration: none;
+        color: #131313;
+        position: relative;
+        margin-left: -10px; }
+        #header #main-menu li a:hover, #header #main-menu li a.active {
+          background: #f3f3f3; }
+        #header #main-menu li a:after {
+          content: "";
+          background: url(../img/icon-plus.png);
+          background-position: center center;
+          background-repeat: no-repeat;
+          width: 9px;
+          height: 9px;
+          display: inline-block;
+          position: absolute;
+          right: -4px;
+          top: 12px;
+          z-index: 100; }
+  #header.fixed-header {
+    background: #FFF;
+    position: fixed;
+    width: 100%; }
+
+#footer {
+  background: #d2d2d2;
+  padding: 20px 0;
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  bottom: 0;
+  left: 0; }
+  #footer h2 {
+    color: #ff3300;
+    margin-bottom: 15px;
+    font-weight: 400; }
+  #footer li {
+    margin-bottom: 8px; }
+
+#content {
+  padding-top: 50px;
+  padding-bottom: 240px; }
+  #content h1 {
+    color: #ff3300;
+    font-weight: 700;
+    font-size: 1.8em;
+    padding-bottom: 20px; }
+    #content h1 span {
+      font-family: "Droid Sans Mono";
+      font-size: .8em;
+      font-weight: normal;
+      color: #999;
+      margin-right: 8px; }
+  #content h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 10px; }
+  #content .main-text {
+    background: #f3f3f3;
+    padding: 20px 30px;
+    line-height: 1.8em;
+    -webkit-box-shadow: 8px 8px 0 0 #cecece;
+    box-shadow: 8px 8px 0 0 #cecece; }
+  #content .bio-image {
+    width: 100px;
+    background: #cecece;
+    height: 200px;
+    margin-right: 15px; }
+    #content .bio-image img {
+      width: 100%;
+      height: auto; }
+
+.divisor {
+  height: 112px;
+  width: 100%;
+  position: absolute;
+  bottom: -56px;
+  background-image: url(../img/divisor-white.png);
+  background-repeat: repeat-x;
+  background-position: 50% 50%; }
+
+/*# sourceMappingURL=style.css.map */
