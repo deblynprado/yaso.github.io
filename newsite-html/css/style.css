@@ -77,7 +77,12 @@ body {
   #header.fixed-header {
     background: #FFF;
     position: fixed;
-    width: 100%; }
+    width: 100%;
+    box-shadow: 5px 5px 5px #ccc; }
+    #header.fixed-header .divisor {
+      background-image: url(../img/divisor-black.png); }
+    #header.fixed-header #main-menu {
+      padding-bottom: 30px; }
 
 #footer {
   background: #d2d2d2;
@@ -126,6 +131,30 @@ body {
     #content .bio-image img {
       width: 100%;
       height: auto; }
+  #content .scroll-nav__wrapper {
+    display: none;
+    position: fixed;
+    top: 150px;
+    right: 5px;
+    padding: 10px;
+    background: #f3f3f3;
+    -webkit-box-shadow: 8px 8px 0 0 #cecece;
+    box-shadow: 8px 8px 0 0 #cecece; }
+    #content .scroll-nav__wrapper .scroll-nav__heading {
+      display: none; }
+    #content .scroll-nav__wrapper .scroll-nav__item {
+      margin-bottom: 5px; }
+      #content .scroll-nav__wrapper .scroll-nav__item a {
+        overflow: hidden;
+        text-indent: -9999px;
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;
+        background: #fff;
+        display: block;
+        border: 1px solid #cecece; }
+      #content .scroll-nav__wrapper .scroll-nav__item.active a, #content .scroll-nav__wrapper .scroll-nav__item.in-view a {
+        background: #cecece; }
 
 .divisor {
   height: 112px;

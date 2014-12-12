@@ -32,13 +32,13 @@ html, body {
 	float:right;
 }
 .clearfix:after {
-     visibility: hidden;
-     display: block;
-     font-size: 0;
-     content: " ";
-     clear: both;
-     height: 0;
-     }
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
 .clearfix { display: inline-block; }
 /* start commented backslash hack \*/
 * html .clearfix { height: 1%; }
@@ -101,6 +101,15 @@ body {
 		background:#FFF;
 		position: fixed;
 		width: 100%;
+		box-shadow:5px 5px 5px #ccc;
+
+		.divisor {
+			background-image: url(../img/divisor-black.png);
+
+		}
+		#main-menu {
+			padding-bottom:30px;
+		}
 	}
 }
 
@@ -163,6 +172,37 @@ body {
 		img {
 			width: 100%;
 			height: auto;
+		}
+	}
+
+	.scroll-nav__wrapper {
+		display: none;
+		position:fixed;
+		top:150px;
+		right: 5px;
+		padding:10px;
+		background:$bg-color;
+		-webkit-box-shadow: 8px 8px 0 0 $shadow-color;
+		box-shadow: 8px 8px 0 0 $shadow-color;
+
+		.scroll-nav__heading {
+			display: none;
+		}
+		.scroll-nav__item {
+			margin-bottom: 5px;
+			a {
+				overflow: hidden;
+				text-indent: -9999px;
+				width: 10px;
+				height: 10px;
+				border-radius:10px;
+				background:#fff;
+				display: block;
+				border:1px solid $shadow-color;
+			}
+			&.active a, &.in-view a {
+				background:$shadow-color;
+			}
 		}
 	}
 
