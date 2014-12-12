@@ -94,8 +94,8 @@ body {
 			display: inline;
 			&:last-child a:after { display:none; }
 			@include respond-to(small-screens) {
-				margin-bottom:8px;
-				display: inline-block;
+				margin-bottom:8px!important;
+				display: inline-block!important;
 			}
 			a {
 				@include respond-to(small-screens) {
