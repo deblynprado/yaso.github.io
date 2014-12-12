@@ -93,6 +93,9 @@ body {
 		li {
 			display: inline;
 			&:last-child a:after { display:none; }
+			@include respond-to(small-screens) {
+				margin-bottom:8px;
+			}
 			a {
 				@include respond-to(small-screens) {
 					padding: 8px 15px;
