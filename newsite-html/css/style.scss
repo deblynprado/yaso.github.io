@@ -264,7 +264,9 @@ body {
 		background:$bg-color;
 		-webkit-box-shadow: 8px 8px 0 0 $shadow-color;
 		box-shadow: 8px 8px 0 0 $shadow-color;
-
+		li {
+			margin-left: 0;
+		}
 		@include respond-to(small-screens) {
 			display: none!important;
 		}
