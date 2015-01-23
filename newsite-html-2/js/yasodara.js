@@ -1,5 +1,8 @@
 $(function () {
 
+
+	var max_height = $('#wrapper').height();
+
 	function getRandomInt(min, max) {
 	    return Math.floor(Math.random() * (max - min + 1)) + min;
 	}
@@ -26,7 +29,7 @@ $(function () {
 
 		var sort_cell = getRandomInt(1,10),
 			sort_left = getRandomInt(1,20);
-			sort_top = getRandomInt(2800, 3400),
+			sort_top = getRandomInt(max_height+600, max_height+1200),
 			sort_speed = 5-(sort_left/25);
 
 		create_cell(sort_cell, sort_top, sort_left, sort_speed);
@@ -37,7 +40,7 @@ $(function () {
 	for (var i = 4; i >= 0; i--) {
 
 		var sort_cell = getRandomInt(1,10),
-			sort_top = getRandomInt(2200, 2350),
+			sort_top = getRandomInt(max_height, max_height+150),
 			sort_speed = getRandomArbitrary(1,2),
 			sort_left = getRandomInt(40,50);
 
@@ -50,7 +53,7 @@ $(function () {
 
 		var sort_cell = getRandomInt(1,10),
 			sort_left = getRandomInt(65,100);
-			sort_top = getRandomInt(1500, 2700),
+			sort_top = getRandomInt(max_height-700, max_height+500),
 			sort_speed = 2*(sort_left/25);
 
 		create_cell(sort_cell, sort_top, sort_left, sort_speed);
@@ -62,7 +65,7 @@ $(function () {
 
 		var sort_cell = getRandomInt(1,10),
 			sort_left = getRandomInt(65,100);
-			sort_top = getRandomInt(2200, 2500),
+			sort_top = getRandomInt(max_height, max_height+300),
 			sort_speed = getRandomInt(1,2);
 
 		create_cell(sort_cell, sort_top, sort_left, sort_speed);

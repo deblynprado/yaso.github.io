@@ -89,8 +89,14 @@ p {
 a {
 	background:$alert-color;
 	text-decoration: none;
+	&:hover {
+		background-color:$primary-color;
+	}
 }
 
+img {
+	max-width:100%;
+}
 #header {
 	text-align:center;
 	padding-top:100px;
