@@ -18,6 +18,15 @@ $text-hightlight-bg: $alert-color;
   line-height: ($sizeValue +.5) + rem;
 }
 
+@mixin bp($point) {
+  @if $point == medium_screen {
+    @media (max-width: 960px) { @content; }
+  }
+  @else if $point == small_screen {
+    @media (max-width: 300px)  { @content; }
+  }
+}
+
 // FOOTER FIX
 html, body {
 	margin:0;
@@ -30,6 +39,10 @@ html, body {
 }
 #content {
 	padding-bottom: 450px;
+	@include bp(medium_screen) {
+		padding-bottom: 230px;
+	}
+
 }
 #footer {
 	width:100%;
@@ -104,22 +117,39 @@ img {
 .contents {
 	width: 960px;
 	margin: 0 auto;
+	@include bp(medium_screen) {
+		width: 100%;
+	}
 }
 #content {
 	position:relative;
 	z-index:10000;
 	> .contents {
 		padding-top:250px;
+		@include bp(medium_screen) {
+			padding-top: 50px;
+		}
 	}
 }
 
 #footer {
 	background:#0C1622;
+
+	@include bp(medium_screen) {
+		height: 200px;
+	}
+	
 	.links {
 		@extend .contents;
 		@extend .clearfix;
 		height: 55px;
+		
 		padding: 15px 0 0;
+
+		@include bp(medium_screen) {
+			height: 145px;
+			padding: 15px 15px 0;
+		}
 		a {
 			background:transparent;
 			display: block;
@@ -127,22 +157,48 @@ img {
 	}
 	.copy {
 		height: 30px;
+		
 		background:$primary-color;
 		@include font-size(.6);
 		line-height: 30px;
 		text-align: center;
+
+		@include bp(medium_screen) {
+			height: 40px;
+			padding-top: 8px;
+			line-height: normal;
+		}
 	}
 }
 .inner {
 	padding:20px;
 }
+
+
 .col2 {
 	float:left;
 	width:50%;
+
+	@include bp(medium_screen) {
+		width: 100%;
+		float: none;
+		clear: both;
+	}
+
 }
 .col4 {
 	float:left;
 	width:25%;	
+	@include bp(medium_screen) {
+		width: 50%;
+		margin-bottom: 15px;
+	}
+	@include bp(small_screen) {
+		width: 100%;
+		float: none;
+		clear: both;
+	}
+
 }
 
 .social-icons {
@@ -162,6 +218,10 @@ img {
 		&.twitter { background-position: -40px 0; }
 		&.email { background-position: -80px 0; }
 		&.flickr { background-position: -120px 0; }
+
+		@include bp(medium_screen) {
+			margin-right: 5px;
+		}
 	}
 }
 
@@ -181,6 +241,9 @@ ul.projects {
 	position: absolute;
 	top: 15px;
 	right:0;
+	@include bp(medium_screen) {
+		right: 15px;
+	}
 	a {
 		background:transparent;
 		font-size: 1.2em;
@@ -193,6 +256,9 @@ ul.projects {
 // parallax el
 .parallax-el {
 	position:absolute;
+	@include bp(medium_screen) {
+		display: none;
+	}
 	&.top {
 		top: 0;
 		bottom:auto;
