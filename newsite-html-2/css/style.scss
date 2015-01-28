@@ -69,12 +69,13 @@ html, body {
 // CLEARFIX 
 
 body {
-	background-image:url(../images/bg.png);
+	background-image:url(../images/bg_opaque.png);
 	background-repeat: repeat-x;
 	background-position:top center;
 	background-color: #fff;
 	background-attachment:fixed;
 	overflow-x:hidden;
+	background-color:#373f49;
 	@include font-size(.8);
 
 }
