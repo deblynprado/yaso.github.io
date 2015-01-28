@@ -106,6 +106,8 @@ img {
 	margin: 0 auto;
 }
 #content {
+	position:relative;
+	z-index:10000;
 	> .contents {
 		padding-top:250px;
 	}
