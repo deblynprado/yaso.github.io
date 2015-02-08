@@ -42,7 +42,7 @@ html, body {
 #content {
 	padding-bottom: 450px;
 	@include bp(medium_screen) {
-		padding-bottom: 230px;
+		padding-bottom: 300px;
 	}
 
 }
@@ -147,7 +147,41 @@ img {
 		}
 	}
 }
+.section {
+	h2 {
+		margin: 50px 0 10px 0;
+	}
+}
 
+.scroll-nav__wrapper {
+		position:fixed;
+		top:150px;
+		right: 5px;
+		padding:10px;
+		@include bp(small_screen) {
+			display: none;
+		}
+
+		.scroll-nav__heading {
+			display: none;
+		}
+		.scroll-nav__item {
+			margin-bottom: 5px;
+			a {
+				overflow: hidden;
+				text-indent: -9999px;
+				width: 10px;
+				height: 10px;
+				border-radius:10px;
+				background:#fff;
+				display: block;
+				border:1px solid $alert-color;
+			}
+			&.active a, &.in-view a {
+				background:$alert-color;
+			}
+		}
+	}
 #footer {
 	background:#0C1622;
 	z-index: 10000;
@@ -245,6 +279,22 @@ img {
 		@include bp(medium_screen) {
 			margin-right: 5px;
 		}
+	}
+	&.social-icons-footer {	
+		padding: 0;
+		position: absolute;
+		bottom: 120px;
+		width: 100%;
+		text-align: center;
+		@include bp(medium_screen) {
+			bottom:220px;
+		}
+		a {
+			margin-right: 0 25px;
+			float: none;
+			display: inline-block;
+		}
+
 	}
 }
 
