@@ -7,9 +7,10 @@ $mono-font: "Droid Sans Mono";
 
 $default-color: #373F49;
 $primary-color: #a70a0a;
-$alert-color: #710101;
+$alert-color: #98BABE;
+// $alert-color: #710101;
 
-$text-color: #FFF;
+$text-color: #000;
 $text-hightlight-bg: $alert-color;
 
 
@@ -70,14 +71,14 @@ html, body {
 // CLEARFIX 
 
 body {
-	background-image:url(../images/bg_opaque.png);
-	background-repeat: repeat-x;
-	background-position:top center;
+	// background-image:url(../images/bg_opaque.png);
+	// background-repeat: repeat-x;
+	// background-position:top center;
 	background-color: #fff;
-	background-attachment:fixed;
+	// background-attachment:fixed;
 	overflow-x:hidden;
-	background-color:#373f49;
-	@include font-size(.8);
+	// background-color:#373f49;
+	// @include font-size(.9);
 
 }
 * {
@@ -89,9 +90,22 @@ h1, h2, h3, h4 {
 	font-family:$primary-font; 
 	font-weight:normal;
 }
+h1 a {
+	font-family:$primary-font; 
+	background:none;
+	-webkit-transition: color 300ms ease;
+	-moz-transition: color 300ms ease;
+	-ms-transition: color 300ms ease;
+	-o-transition: color 300ms ease;
+	transition: color 300ms ease;
+	&:hover {
+		background:none;
+		color: $primary-color;
+	}	
+}
 h1 { @include font-size(5); }
 h2 { @include font-size(1.8); }
-h3 { @include font-size(2.3); padding-bottom:20px; padding-top: 50px;}
+h3 { @include font-size(2.3); padding-bottom:20px; padding-top: 50px; color: #BE0000}
 
 p {
 	text-align:left;
@@ -136,13 +150,20 @@ img {
 
 #footer {
 	background:#0C1622;
-
+	z-index: 10000;
 	@include bp(medium_screen) {
 		height: 200px;
 	}
 	
 	* {
 		font-family: $mono-font;
+		color: #fff;
+	}
+	a {
+		background:transparent!important;
+		&:hover {
+			color: $alert-color;
+		}
 	}
 	.links {
 		@extend .contents;
@@ -154,11 +175,8 @@ img {
 			height: 145px;
 			padding: 15px 15px 0;
 		}
-		a {
-			background:transparent;
-			display: block;
-
-		}
+		a { display:block; }
+		
 	}
 	.copy {
 		height: 30px;
@@ -237,9 +255,9 @@ ul.projects {
 }
 
 .box {
-	border-radius: 5px;
-	background:#5B616A;
-	padding:10px;
+	// border-radius: 5px;
+	// background:#5B616A;
+	// padding:10px;
 }
 
 .language-selector {
@@ -251,9 +269,12 @@ ul.projects {
 	}
 	a {
 		background:transparent;
-		font-size: 1.2em;
-		&:hover {
-			background:$alert-color;
+		font-size: 1.5em;
+		color: #CCCCCC;
+		margin-right: 10px;
+		font-family: $primary-font;
+		&:hover, &.active {
+			color: $alert-color;
 		}
 	}
 }

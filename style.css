@@ -1,41 +1,25 @@
-body {
-background-color: #234DDD;
-}
+html, body
+{
+	float: left;
+	width: 500px;
+	margin: 5 5 5 20px;
+	}
+
+/* contents styles */
+#contents {
+	float: left;
+	width: 500px;
+	margin: 5 5 0 20px;
+	}
 
 
-#yaso {
-    font-size: 30px; 
-    font-family: sans-serif;
-    text-decoration: line-through;
-    width: 5em;
-    height: 5em;
-    position: absolute;
-    left: 10%;
-    top: 10%;
-    -webkit-transform-origin: center 70%;
-    -webkit-animation: shake .3s infinite alternate;
-    -webkit-transition: opacity 1s ease;
-}
-@-webkit-keyframes shake {
-    0% {
-        -webkit-transform: rotate(0);
-    }
-    10% {
-        -webkit-transform: rotate(1deg);
-    }
-    20% {
-        -webkit-transform: rotate(-1deg);
-    }
-    30% {
-        -webkit-transform: rotate(0);
-    }
-    50% {
-        -webkit-transform: rotate(1deg);
-    }
-    70% {
-        -webkit-transform: rotate(-1deg);
-    }
-    100% {
-        -webkit-transform: rotate(0);
-    }
-}
+/* footer styles */
+
+#footer {
+	clear: both;
+	color: #24FF2B;
+	font-style: italic;
+	text-align: left;
+	font-size: 100%;	
+	padding: 5px;
+	}
