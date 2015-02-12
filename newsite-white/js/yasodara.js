@@ -23,7 +23,8 @@ $(function () {
 	   			start_point = last_screen_pos + sort_int,
 	   			end_point = last_screen_pos,
 	   			opacity = scale = getRandomArbitrary(0.5,1),
-	   			blur = getRandomInt(0,10);
+	   			blur = 1;
+	   			// blur = getRandomInt(0,10);
 
 	   		var cell_model = $('<div />').addClass('parallax-el').html('<img style="-webkit-filter: blur('+blur+'px); filter: blur('+blur+'px); -ms-transform: scale('+scale+'); -webkit-transform: scale('+scale+'); transform: scale('+scale+');" src="images/parallax-elements/cell'+sort_cell+'.png" />')
 	   		
@@ -40,7 +41,7 @@ $(function () {
 
 
 
-	   	for (var i = 15; i >= 0; i--) {
+	   	for (var i = 25; i >= 0; i--) {
 
 	   		var sort_cell = getRandomInt(1,10),
 		   		sort_left = getRandomInt(1,25);
@@ -49,7 +50,7 @@ $(function () {
 	   	};
 
 
-	   	for (var i = 10; i >= 0; i--) {
+	   	for (var i = 15; i >= 0; i--) {
 
 	   		var sort_cell = getRandomInt(1,10),
 		   		sort_left = getRandomInt(25,50);
@@ -57,7 +58,7 @@ $(function () {
 
 	   	};
 
-	   	for (var i = 8; i >= 0; i--) {
+	   	for (var i = 15; i >= 0; i--) {
 
 	   		var sort_cell = getRandomInt(1,10),
 		   		sort_left = getRandomInt(50,100);
